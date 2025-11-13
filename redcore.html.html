@@ -1,0 +1,151 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RedCore -- The OS for Mars</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@400;600&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at top, #6e0000 0%, #120000 80%);
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3rem;
+      color: #ff4b4b;
+      margin-bottom: 0.2em;
+      letter-spacing: 2px;
+    }
+
+    h2 {
+      color: #ff9b7d;
+      font-weight: 500;
+      margin-bottom: 1.5em;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 80, 80, 0.3);
+      border-radius: 20px;
+      padding: 2em;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 0 40px rgba(255, 50, 50, 0.2);
+    }
+
+    input {
+      width: 100%;
+      padding: 0.8em;
+      margin: 0.5em 0;
+      border: none;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+      font-size: 1em;
+      outline: none;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.9em;
+      background: linear-gradient(90deg, #ff1e1e, #a60000);
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 0.8em;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #ff5555, #d60000);
+    }
+
+    #o2display {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.4em;
+      margin-top: 1em;
+      color: #00ff99;
+      display: none;
+    }
+
+    .signup {
+      margin-top: 2em;
+    }
+
+    .signup input {
+      width: 70%;
+      border-radius: 8px 0 0 8px;
+      margin: 0;
+      display: inline-block;
+    }
+
+    .signup button {
+      width: 30%;
+      border-radius: 0 8px 8px 0;
+      margin: 0;
+      display: inline-block;
+      padding: 0.8em;
+      font-size: 0.9em;
+    }
+
+    footer {
+      margin-top: 3em;
+      color: #777;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>RedCore</h1>
+  <h2>The Operating System for Mars</h2>
+
+  <div class="card">
+    <input type="email" id="email" placeholder="Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Log In</button>
+    <div id="o2display">O₂: 72h</div>
+  </div>
+
+  <div class="signup">
+    <input type="email" placeholder="Enter your email to join mission">
+    <button>Sign Up</button>
+  </div>
+
+  <footer>
+    © 2025 RedCore Labs -- Designed for the Red Planet
+  </footer>
+
+  <script>
+    function login() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const o2display = document.getElementById('o2display');
+
+      if (email === 'elon@spacex.com' && password === 'mars2026') {
+        o2display.style.display = 'block';
+      } else {
+        alert('Access denied: Oxygen low!');
+      }
+    }
+  </script>
+
+</body>
+</html>
